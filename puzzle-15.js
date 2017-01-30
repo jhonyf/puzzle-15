@@ -27,7 +27,6 @@ class Tile {
   }
 
   move(newX, newY) {
-    console.log('move');
     let dx = 8;
     let dy = 8;
 
