@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="./puzzle-15.js"></script>
+
+    <style type="text/css">
+      body {
+        font-family: 'Arial';
+        background-color: #F9F7E8;
+      }
+      h1 {
+        text-align: center;
+      }
+      .canvas-container {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+      }
+      .button-container {
+        margin-top: 15px;
+        text-align: center;
+      }
+      .button {
+        cursor: pointer;
+        color: #fff;
+        border-radius: 5px;
+        border: 2px solid #ddd;
+        background-color: #17c37b;
+        padding: 15px;
+        display: inline-block;
+        width: 100px;
+      }
+      canvas {
+        cursor: pointer;
+        border: 1px solid #CCC;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Puzzle 15</h1>
+
+    <div class="canvas-container">
+      <canvas id="puzzle-board" height="500" width="500"></canvas>
+    </div>
+
+    <div class="button-container">
+      <div class="button" id="scramble">Scramble</div>
+    </div>
+
+    <script>
+      var game = new Puzzle(5, document.getElementById('puzzle-board'));
+      game.start();
+
+      document.getElementById("scramble").addEventListener("click", function() {
+        game.scramble();
+      });
+    </script>
+  </body>
+</html>
